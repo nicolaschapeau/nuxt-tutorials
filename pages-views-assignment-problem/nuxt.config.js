@@ -13,38 +13,33 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
   },
 
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: 'red' },
+  loading: { color: '#3B8070' },
 
   /*
   ** Global CSS
   */
-  css: ['~/assets/styles/main.css'],
+  css: [
+  ],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: [
+  ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    '@nuxtjs/pwa'
   ],
-  /*
-  ** Axios module configuration
-  */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
-  },
 
   /*
   ** Build configuration
@@ -53,6 +48,8 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {}
+    extend(config, ctx) {
+      
+    }
   }
 }
