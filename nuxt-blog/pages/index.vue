@@ -4,18 +4,23 @@
       <h1>Get the latest posts !</h1>
     </section>
     <section class="featured-posts">
-      <nuxt-link :to="'/posts/' + 1" class="post-preview">
-        <article>
-          <div class="post-thumbnail" style="background-image: url(https://www.ahstatic.com/photos/0747_ho_00_p_2048x1536.jpg);"></div>
-          <div class="post-content">
-            <h1>Post Title</h1>
-            <p>Preview Text</p>
-          </div>
-        </article>
-      </nuxt-link>
+      <post-preview id="1" thumbnail="https://i.ytimg.com/vi/pegZ1w5W9N4/maxresdefault.jpg" title="Title 1" preview-text="first post"/>
+      <post-preview id="2" thumbnail="https://newevolutiondesigns.com/images/freebies/nature-hd-background-preview-1.jpg" title="Title 2" preview-text="second post"/>
+      <post-preview id="3" thumbnail="http://www.rose-erz.de/web/Wassersport%20Weyers/img/image-4.jpg" title="Title 3" preview-text="third post"/>
+      <post-preview id="4" thumbnail="http://www.staroceans.org/w3c/img_mountains.jpg" title="Title 4" preview-text="fourth post"/>
     </section>
   </div>
 </template>
+
+<script>
+import PostPreview from '~/components/Posts/PostPreview'
+
+export default {
+  components: {
+    PostPreview
+  }
+}
+</script>
 
 <style scoped>
 .intro {
@@ -23,6 +28,7 @@
   position: relative;
   padding: 30px;
   box-sizing: border-box;
+  background-image: url('~assets/images/main-page-background.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -33,10 +39,11 @@
   left: 5%;
   width: 90%;
   font-size: 1.5rem;
-  color: black;
-  background-color: #eee;
+  color: white;
+  background-color: #333;
   padding: 10px;
   box-sizing: border-box;
+  font-weight: 300;
 }
 
 @media (min-width: 768px) {
@@ -52,41 +59,5 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-}
-
-.post-preview {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: white;
-  width: 90%;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-@media (min-width: 850px) {
-  .post-preview {
-    width: 400px;
-    margin: 10px;
-  }
-}
-
-.post-thumbnail {
-  width: 100%;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
-}
-
-.post-content {
-  padding: 10px;
-  text-align: center;
-}
-
-a:hover .post-content,
-a:active .post-content {
-  background-color: #ccc;
 }
 </style>
