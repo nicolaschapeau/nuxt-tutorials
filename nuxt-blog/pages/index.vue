@@ -3,21 +3,16 @@
     <section class="intro">
       <h1>Get the latest posts !</h1>
     </section>
-    <section class="featured-posts">
-      <post-preview id="1" thumbnail="https://i.ytimg.com/vi/pegZ1w5W9N4/maxresdefault.jpg" title="Title 1" preview-text="first post"/>
-      <post-preview id="2" thumbnail="https://newevolutiondesigns.com/images/freebies/nature-hd-background-preview-1.jpg" title="Title 2" preview-text="second post"/>
-      <post-preview id="3" thumbnail="http://www.rose-erz.de/web/Wassersport%20Weyers/img/image-4.jpg" title="Title 3" preview-text="third post"/>
-      <post-preview id="4" thumbnail="http://www.staroceans.org/w3c/img_mountains.jpg" title="Title 4" preview-text="fourth post"/>
-    </section>
+    <post-list />
   </div>
 </template>
 
 <script>
-import PostPreview from '~/components/Posts/PostPreview'
+import PostList from '~/components/Posts/PostList'
 
 export default {
   components: {
-    PostPreview
+    PostList
   }
 }
 </script>
@@ -50,14 +45,5 @@ export default {
   .intro h1 {
     font-size: 2rem;
   }
-}
-
-.featured-posts {
-  display: flex;
-  padding: 20px;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
 }
 </style>
