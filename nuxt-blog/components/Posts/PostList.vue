@@ -1,9 +1,13 @@
 <template>
   <section class="featured-posts">
-    <post-preview id="1" :is-admin="isAdmin" thumbnail="https://i.ytimg.com/vi/pegZ1w5W9N4/maxresdefault.jpg" title="Title 1" preview-text="first post"/>
-    <post-preview id="2" :is-admin="isAdmin" thumbnail="https://newevolutiondesigns.com/images/freebies/nature-hd-background-preview-1.jpg" title="Title 2" preview-text="second post"/>
-    <post-preview id="3" :is-admin="isAdmin" thumbnail="http://www.rose-erz.de/web/Wassersport%20Weyers/img/image-4.jpg" title="Title 3" preview-text="third post"/>
-    <post-preview id="4" :is-admin="isAdmin" thumbnail="http://www.staroceans.org/w3c/img_mountains.jpg" title="Title 4" preview-text="fourth post"/>
+    <post-preview
+        v-for="post in posts"
+        :key="post.id"
+        :id="post.id"
+        :is-admin="isAdmin"
+        :thumbnailLink="post.thumbnailLink"
+        :title="post.title"
+        :preview-text="post.previewText" />
   </section>
 </template>
 
@@ -18,6 +22,10 @@ export default {
     isAdmin: {
       type: Boolean,
       default: false
+    },
+    posts: {
+      type: Array,
+      required: true
     }
   }
 }

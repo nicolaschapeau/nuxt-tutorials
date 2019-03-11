@@ -3,7 +3,7 @@
     <section class="intro">
       <h1>Get the latest posts !</h1>
     </section>
-    <post-list />
+    <post-list :posts="loadedPosts" />
   </div>
 </template>
 
@@ -13,6 +13,11 @@ import PostList from '~/components/Posts/PostList'
 export default {
   components: {
     PostList
+  },
+  computed: {
+    loadedPosts() {
+      return this.$store.getters.loadedPosts
+    }
   }
 }
 </script>
