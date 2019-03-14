@@ -3,7 +3,7 @@
     <header class="the-header">
       <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
       <div class="logo">
-        <nuxt-link to="/">NUXT BLOG</nuxt-link>
+        <nuxt-link to="/">NuxtBlog</nuxt-link>
       </div>
       <div class="spacer"></div>
       <div class="navigation-items">
@@ -41,7 +41,7 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: black;
+  background-color: white;
   z-index: 100;
   box-sizing: border-box;
   padding: 0 20px;
@@ -54,7 +54,7 @@ export default {
 
 .logo a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .spacer {
@@ -84,7 +84,7 @@ export default {
 
 .nav-item a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .nav-item a:hover,

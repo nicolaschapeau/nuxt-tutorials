@@ -29,7 +29,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#ff0000' },
 
   /*
   ** Global CSS
@@ -69,5 +69,8 @@ module.exports = {
       */
       extend(config, ctx) {}
     }
+  },
+  env: {
+    baseUrl: 'https://nuxt-blog-a2a3b.firebaseio.com/'
   }
 }

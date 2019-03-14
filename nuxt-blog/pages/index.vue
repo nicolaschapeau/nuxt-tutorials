@@ -1,6 +1,8 @@
 <template>
   <div class="home-page">
     <section class="intro">
+    </section>
+    <section class="intro__text">
       <h1>Get the latest posts !</h1>
     </section>
     <post-list :posts="loadedPosts" />
@@ -25,30 +27,48 @@ export default {
 <style scoped>
 .intro {
   height: 300px;
+  width: 100%;
   position: relative;
-  padding: 30px;
   box-sizing: border-box;
-  background-image: url('~assets/images/main-page-background.jpg');
+  background-image: url('~assets/images/home__background.jpeg');
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
-.intro h1 {
+.intro:after {
+  content: '';
   position: absolute;
-  top: 10%;
-  left: 5%;
-  width: 90%;
-  font-size: 1.5rem;
+  z-index: 2;
+  width: 100%;
+  height: 300px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.intro__text {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-top: -300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.intro__text h1 {
+  position: relative;
+  font-size: 3rem;
   color: white;
-  background-color: #333;
   padding: 10px;
   box-sizing: border-box;
   font-weight: 300;
+  z-index: 5;
 }
 
 @media (min-width: 768px) {
-  .intro h1 {
-    font-size: 2rem;
+  .intro__text h1 {
+    font-size: 3rem;
   }
 }
 </style>

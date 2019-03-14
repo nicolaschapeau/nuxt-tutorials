@@ -1,6 +1,7 @@
 <template>
   <div class="single-post-page">
     <section class="post">
+      <img :src="loadedPost.thumbnail">
       <h2 class="post-title">{{ loadedPost.title }}</h2>
       <div class="post-details">
         <div class="post-detail">Last updated on : {{ loadedPost.updatedDate }}</div>
@@ -20,11 +21,7 @@ import axios from 'axios'
 export default {
   asyncData(context) {
     return axios
-      .get(
-        'https://nuxt-blog-a2a3b.firebaseio.com/posts/' +
-          context.params.id +
-          '.json'
-      )
+      .get(process.env.baseUrl + 'posts/' + context.params.id + '.json')
       .then(res => {
         return {
           loadedPost: res.data
@@ -44,6 +41,12 @@ export default {
 
 .post {
   width: 100%;
+}
+
+.post img {
+  width: 70%;
+  border-radius: 2px;
+  margin: 5px 5px 30px 5px;
 }
 
 @media (min-width: 768px) {
