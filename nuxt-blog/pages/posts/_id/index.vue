@@ -4,7 +4,7 @@
       <img :src="loadedPost.thumbnail">
       <h2 class="post-title">{{ loadedPost.title }}</h2>
       <div class="post-details">
-        <div class="post-detail">Last updated on : {{ loadedPost.updatedDate }}</div>
+        <div class="post-detail">Last updated on : {{ loadedPost.updateDate | date }}</div>
         <div class="post-detail">Written by : {{ loadedPost.author }} </div>
       </div>
       <p>{{ loadedPost.content }}</p>
