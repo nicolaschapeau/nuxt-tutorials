@@ -30,6 +30,7 @@
       <change beforePath="$PROJECT_DIR$/nuxt-blog/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt-blog/nuxt.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt-blog/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt-blog/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt-blog/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt-blog/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-blog/pages/admin/auth/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt-blog/pages/admin/auth/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt-blog/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt-blog/pages/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt-blog/pages/posts/_id/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt-blog/pages/posts/_id/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt-blog/pages/posts/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt-blog/pages/posts/index.vue" afterDir="false" />
@@ -45,12 +46,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nuxt-blog/middleware/log.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="26">
               <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nuxt-blog/pages/admin/auth/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-312" />
           </provider>
         </entry>
       </file>
@@ -78,9 +86,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="330" />
-    <option name="width" value="1223" />
-    <option name="height" value="1034" />
+    <option name="x" value="-158" />
+    <option name="y" value="-11" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -88,7 +97,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -105,12 +113,28 @@
               <item name="nuxtjs" type="b2602c69:ProjectViewProjectNode" />
               <item name="nuxtjs" type="462c0819:PsiDirectoryNode" />
               <item name="nuxt-blog" type="462c0819:PsiDirectoryNode" />
-              <item name="middleware" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nuxtjs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nuxtjs" type="462c0819:PsiDirectoryNode" />
+              <item name="nuxt-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nuxtjs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nuxtjs" type="462c0819:PsiDirectoryNode" />
+              <item name="nuxt-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -151,11 +175,12 @@
       <workItem from="1552674166377" duration="1073000" />
       <workItem from="1552686339916" duration="7000" />
       <workItem from="1552742041065" duration="64000" />
+      <workItem from="1552897217174" duration="251000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1144000" />
+    <option name="totallyTimeSpent" value="1395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -232,6 +257,11 @@
         <state relative-caret-position="26">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nuxt-blog/pages/admin/auth/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-312" />
       </provider>
     </entry>
   </component>
