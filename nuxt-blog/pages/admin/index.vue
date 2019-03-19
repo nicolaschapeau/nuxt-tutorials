@@ -12,6 +12,7 @@
 
 <script>
 export default {
+  middleware: 'auth',
   computed: {
     loadedPosts() {
       return this.$store.getters.loadedPosts

@@ -7,13 +7,13 @@
 </template>
 
 <script>
-import axios from 'axios'
 import AdminPostForm from '@/components/Admin/AdminPostForm'
 
 export default {
   components: {
     AdminPostForm
   },
+  middleware: 'auth',
   methods: {
     onSubmitted(postData) {
       this.$store.dispatch('addPost', postData).then(() => {

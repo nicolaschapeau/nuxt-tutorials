@@ -4,7 +4,8 @@ import axios from 'axios'
 const createStore = () => {
   return new Vuex.Store({
     state: {
-      loadedPosts: []
+      loadedPosts: [],
+      token: null
     },
     mutations: {
       setPosts(state, posts) {
@@ -18,6 +19,9 @@ const createStore = () => {
           post => post.id === editedPost.id
         )
         state.loadedPosts[postIndex] = editedPost
+      },
+      setToken(state, token) {
+        state.token = token
       }
     },
     actions: {
@@ -54,9 +58,29 @@ const createStore = () => {
           updateDate: new Date()
         }
         return axios
-          .put(process.env.baseUrl + 'posts/' + editPost.id + '.json', editPost)
+          .put(process.env.baseUrl + 'posts/' + editPost.id + '.json?auth=' + vuexContext.state.token, editPost)
           .then(res => {
             vuexContext.commit('editPost', editPost)
+          })
+          .catch(e => console.log(e))
+      },
+      authenticateUser(vuexContext, authData) {
+        let authUrl =
+          'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=' +
+          process.env.fbAPIkey
+        if (!authData.isLogin) {
+          authUrl =
+            'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=' +
+            process.env.fbAPIkey
+        }
+        return this.$axios
+          .$post(authUrl, {
+            email: authData.email,
+            password: authData.password,
+            returnSecureToken: true
+          })
+          .then(result => {
+            vuexContext.commit('setToken', result.idToken)
           })
           .catch(e => console.log(e))
       }
@@ -64,6 +88,9 @@ const createStore = () => {
     getters: {
       loadedPosts(state) {
         return state.loadedPosts
+      },
+      isAuthenticated(state) {
+        return state.token != null
       }
     }
   })
