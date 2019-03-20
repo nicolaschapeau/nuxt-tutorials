@@ -14,7 +14,7 @@ export default {
   components: {
     AdminPostForm
   },
-  middleware: 'auth',
+  middleware: ['checkauth', 'auth'],
   asyncData(context) {
     return axios
       .get(process.env.baseUrl + 'posts/' + context.params.postId + '.json')

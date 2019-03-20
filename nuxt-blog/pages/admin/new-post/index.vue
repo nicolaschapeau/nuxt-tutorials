@@ -13,7 +13,7 @@ export default {
   components: {
     AdminPostForm
   },
-  middleware: 'auth',
+  middleware: ['checkauth', 'auth'],
   methods: {
     onSubmitted(postData) {
       this.$store.dispatch('addPost', postData).then(() => {
